@@ -1,0 +1,55 @@
+{
+  "name": "@astryxdesign-vue/core",
+  "version": "0.1.0",
+  "description": "Vue 3 components for the Astryx design system",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marco-quintella/astryx-vue.git",
+    "directory": "packages/core"
+  },
+  "bugs": {
+    "url": "https://github.com/marco-quintella/astryx-vue/issues"
+  },
+  "homepage": "https://github.com/marco-quintella/astryx-vue#readme",
+  "keywords": [
+    "vue",
+    "vue3",
+    "astryx",
+    "design-system",
+    "ui",
+    "components"
+  ],
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.0"
+  },
+  "dependencies": {
+    "@astryxdesign/theme-neutral": "^0.1.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "typescript": "^5.8.2",
+    "vite": "^6.2.0",
+    "vite-plugin-dts": "^4.5.3",
+    "vue": "^3.5.13",
+    "vue-tsc": "^2.2.8"
+  },
+  "scripts": {
+    "build": "vite build && vue-tsc --emitDeclarationOnly",
+    "typecheck": "vue-tsc --noEmit"
+  }
+}

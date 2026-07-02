@@ -1,0 +1,6 @@
+@import '@astryxdesign/theme-neutral/theme.css';
+
+.astryx-theme-root {
+  color: var(--color-text-primary, #171717);
+  font-family: var(--font-family-body, system-ui, sans-serif);
+}
