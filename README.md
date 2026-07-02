@@ -10,14 +10,14 @@ Astryx Vue reuses official `@astryxdesign/theme-*` packages for tokens and themi
 
 ## Status
 
-**v0.1.0 — early scaffold**
+**v0.1.0 — phase 1**
 
 | Area | Status |
 | --- | --- |
 | Theme provider (`AstryxTheme`) | ✅ MVP |
 | `themeProps()` utility | ✅ Parity with React core |
-| `Button` | ✅ MVP (token-based styles) |
-| Remaining ~150 components | 🚧 Planned |
+| Phase 1 components (`Button`, `Input`, `Card`, `Badge`, `Heading`, `Text`) | ✅ MVP |
+| Remaining components | 🚧 Planned |
 
 ## Quick start
 
@@ -53,6 +53,7 @@ import '@astryxdesign-vue/core/style.css';
 ```
 astryx-vue/
 ├── packages/core/     # @astryxdesign-vue/core — Vue components + theme bridge
+├── packages/cli/      # @astryxdesign-vue/cli — agent manifest + component docs
 └── playground/        # Vite demo app
 ```
 
@@ -61,7 +62,13 @@ astryx-vue/
 1. **Themes** — consume official `@astryxdesign/theme-*` CSS and built theme objects (no fork).
 2. **API contract** — mirror React prop names and `themeProps()` / `data-variant` surfaces so agents and docs stay portable.
 3. **Components** — Vue SFCs; v0 uses token-driven CSS. Full StyleX-class parity is tracked for a later bridge once the component catalog stabilizes.
-4. **CLI / MCP** — follow-up package `@astryxdesign-vue/cli` will expose the same manifest pattern as `@astryxdesign/cli`.
+4. **CLI** — `@astryxdesign-vue/cli` exposes `component` docs and `manifest --json` for agents (same envelope shape as `@astryxdesign/cli`).
+
+```bash
+pnpm --filter @astryxdesign-vue/cli exec astryx-vue component --list
+pnpm --filter @astryxdesign-vue/cli exec astryx-vue component Button --json
+pnpm --filter @astryxdesign-vue/cli exec astryx-vue manifest --json
+```
 
 ## Relationship to upstream
 
