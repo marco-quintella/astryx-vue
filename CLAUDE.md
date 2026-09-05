@@ -97,6 +97,29 @@ Built-in tools are permitted on code files only when Serena has been tried and f
 
 Hooks are configured in `.claude/settings.json` (remind, auto-approve, activate, cleanup). If Serena tools aren't being used, restart with: `claude --system-prompt="$(serena prompts print-cc-system-prompt-override)"`
 
+## Skills
+
+Available slash commands for common workflows:
+
+| Skill | Description |
+|---|---|
+| `/new-component <Name>` | Scaffold SFC + index + test, register exports, verify build |
+| `/add-variant <Name>` | Add variant/size/color to existing component via Serena |
+| `/theme-check [Name]` | Validate component uses only theme-compatible CSS var tokens |
+| `/a11y-audit [Name]` | Audit ARIA, focus, keyboard nav, color contrast readiness |
+| `/coverage-report [Name]` | Run vitest coverage and analyze gaps vs targets |
+
+## Hook Behaviors
+
+Configured in `.claude/settings.json`:
+
+- **PostToolUse (code edits):** Auto-runs `vue-tsc --noEmit` after any Serena or file edit on code files. Catches type errors immediately.
+- **PreToolUse (panda.config.ts):** Warns to run `pnpm prepare` after editing Panda config to regenerate styled-system.
+- **PreToolUse (Serena remind):** Nudges agent to use Serena tools when too many consecutive built-in reads/greps occur.
+- **PreToolUse (Serena auto-approve):** Auto-approves Serena tool calls in permissive permission modes.
+- **SessionStart:** Activates Serena project and loads instructions.
+- **SessionEnd:** Cleans up Serena hook session data.
+
 ## Key Decisions
 
 - **Panda CSS over StyleX:** StyleX lacks first-class Vue integration. Panda provides equivalent atomic/compile-time/type-safe API with native Vue support.
