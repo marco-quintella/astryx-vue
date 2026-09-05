@@ -293,7 +293,9 @@
     --sizes-4: 1rem;
     --sizes-5: 1.25rem;
     --sizes-6: 1.5rem;
+    --sizes-7: 1.75rem;
     --sizes-8: 2rem;
+    --sizes-9: 2.25rem;
     --sizes-10: 2.5rem;
     --sizes-12: 3rem;
     --sizes-16: 4rem;
@@ -399,6 +401,7 @@
 }
 
 @layer utilities{
+
   .d_inline-flex {
     display: inline-flex;
 }
@@ -469,7 +472,7 @@
 }
 
   .h_7 {
-    height: 7px;
+    height: var(--sizes-7);
 }
 
   .px_3 {
@@ -477,7 +480,7 @@
 }
 
   .h_9 {
-    height: 9px;
+    height: var(--sizes-9);
 }
 
   .px_4 {
@@ -504,6 +507,54 @@
     aspect-ratio: 1;
 }
 
+  .bg_surface {
+    background: var(--colors-surface);
+}
+
+  .c_text {
+    color: var(--colors-text);
+}
+
+  .bg_surfaceSunken {
+    background: var(--colors-surface-sunken);
+}
+
+  .bg_success {
+    background: var(--colors-success);
+}
+
+  .c_fg\.onSuccess {
+    color: fg.onSuccess;
+}
+
+  .bg_successSubtle {
+    background: var(--colors-success-subtle);
+}
+
+  .c_success {
+    color: var(--colors-success);
+}
+
+  .bg_warning {
+    background: var(--colors-warning);
+}
+
+  .bg_warningSubtle {
+    background: var(--colors-warning-subtle);
+}
+
+  .c_warning {
+    color: var(--colors-warning);
+}
+
+  .bg_dangerSubtle {
+    background: var(--colors-danger-subtle);
+}
+
+  .c_danger {
+    color: var(--colors-danger);
+}
+
   .pos_absolute {
     position: absolute;
 }
@@ -524,68 +575,8 @@
     animation: spin 0.8s linear infinite;
 }
 
-  .min-h_screen {
-    min-height: 100vh;
-}
-
-  .bg_bg {
-    background: var(--colors-bg);
-}
-
-  .py_12 {
-    padding-block: var(--spacing-12);
-}
-
-  .max-w_6xl {
-    max-width: 6xl;
-}
-
-  .mx_auto {
-    margin-inline: auto;
-}
-
-  .c_fg\.subtle {
-    color: var(--colors-fg-subtle);
-}
-
-  .d_flex {
-    display: flex;
-}
-
-  .gap_10 {
-    gap: var(--spacing-10);
-}
-
-  .gap_3 {
-    gap: var(--spacing-3);
-}
-
-  .p_6 {
-    padding: var(--spacing-6);
-}
-
-  .bg_bg\.surface {
-    background: var(--colors-bg-surface);
-}
-
-  .bdr_lg {
-    border-radius: var(--radii-lg);
-}
-
   .c_neutral {
     color: neutral;
-}
-
-  .c_success {
-    color: var(--colors-success);
-}
-
-  .c_warning {
-    color: var(--colors-warning);
-}
-
-  .c_danger {
-    color: var(--colors-danger);
 }
 
   .ai_center {
@@ -640,6 +631,18 @@
     font-size: var(--font-sizes-lg);
 }
 
+  .bd-c_borderStrong {
+    border-color: var(--colors-border-strong);
+}
+
+  .bd-c_success {
+    border-color: var(--colors-success);
+}
+
+  .bd-c_warning {
+    border-color: var(--colors-warning);
+}
+
   .bd-w_2px {
     border-width: 2px;
 }
@@ -656,96 +659,12 @@
     border-top-color: transparent;
 }
 
-  .mb_12 {
-    margin-bottom: var(--spacing-12);
-}
-
-  .fs_4xl {
-    font-size: var(--font-sizes-4xl);
-}
-
-  .fw_bold {
-    font-weight: var(--font-weights-bold);
-}
-
-  .mb_2 {
-    margin-bottom: var(--spacing-2);
-}
-
-  .flex-d_column {
-    flex-direction: column;
-}
-
-  .fs_2xl {
-    font-size: var(--font-sizes-2xl);
-}
-
-  .fw_semibold {
-    font-weight: var(--font-weights-semibold);
-}
-
-  .mb_4 {
-    margin-bottom: var(--spacing-4);
-}
-
-  .flex-wrap_wrap {
-    flex-wrap: wrap;
-}
-
-  .bd-w_1px {
-    border-width: 1px;
-}
-
-  .fs_xl {
-    font-size: var(--font-sizes-xl);
-}
-
   .\[\&\:disabled\]\:cursor_not-allowed:disabled {
     cursor: not-allowed;
 }
 
   .\[\&\:disabled\]\:op_0\.5:disabled {
     opacity: 0.5;
-}
-
-  .\[\&\[data-variant\=\"solid\"\]\]\:bg_success[data-variant="solid"] {
-    background: var(--colors-success);
-}
-
-  .\[\&\[data-variant\=\"solid\"\]\]\:c_fg\.onSuccess[data-variant="solid"] {
-    color: fg.onSuccess;
-}
-
-  .\[\&\[data-variant\=\"soft\"\]\]\:bg_successSubtle[data-variant="soft"] {
-    background: var(--colors-success-subtle);
-}
-
-  .\[\&\[data-variant\=\"soft\"\]\]\:c_success[data-variant="soft"] {
-    color: var(--colors-success);
-}
-
-  .\[\&\[data-variant\=\"solid\"\]\]\:bg_warning[data-variant="solid"] {
-    background: var(--colors-warning);
-}
-
-  .\[\&\[data-variant\=\"solid\"\]\]\:c_fg\.onAccent[data-variant="solid"] {
-    color: var(--colors-fg-on-accent);
-}
-
-  .\[\&\[data-variant\=\"soft\"\]\]\:bg_warningSubtle[data-variant="soft"] {
-    background: var(--colors-warning-subtle);
-}
-
-  .\[\&\[data-variant\=\"soft\"\]\]\:c_warning[data-variant="soft"] {
-    color: var(--colors-warning);
-}
-
-  .\[\&\[data-variant\=\"solid\"\]\]\:bd-c_success[data-variant="solid"] {
-    border-color: var(--colors-success);
-}
-
-  .\[\&\[data-variant\=\"solid\"\]\]\:bd-c_warning[data-variant="solid"] {
-    border-color: var(--colors-warning);
 }
 
   .\[\&\:focus-visible\]\:ring_none:focus-visible {

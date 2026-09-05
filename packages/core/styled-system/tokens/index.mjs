@@ -259,9 +259,17 @@ const tokens = {
     "value": "1.5rem",
     "variable": "var(--sizes-6)"
   },
+  "sizes.7": {
+    "value": "1.75rem",
+    "variable": "var(--sizes-7)"
+  },
   "sizes.8": {
     "value": "2rem",
     "variable": "var(--sizes-8)"
+  },
+  "sizes.9": {
+    "value": "2.25rem",
+    "variable": "var(--sizes-9)"
   },
   "sizes.10": {
     "value": "2.5rem",

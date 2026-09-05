@@ -146,28 +146,8 @@ const button = cva({
     color: {
       neutral: {},
       accent: {},
-      success: {
-        '&[data-variant="solid"]': {
-          bg: 'success',
-          borderColor: 'success',
-          color: 'fg.onSuccess',
-        },
-        '&[data-variant="soft"]': {
-          bg: 'successSubtle',
-          color: 'success',
-        },
-      },
-      warning: {
-        '&[data-variant="solid"]': {
-          bg: 'warning',
-          borderColor: 'warning',
-          color: 'fg.onAccent',
-        },
-        '&[data-variant="soft"]': {
-          bg: 'warningSubtle',
-          color: 'warning',
-        },
-      },
+      success: {},
+      warning: {},
       danger: {},
     },
     fullWidth: {
@@ -182,6 +162,20 @@ const button = cva({
       false: {},
     },
   },
+  compoundVariants: [
+    // neutral
+    { variant: 'solid', color: 'neutral', css: { bg: 'surface', borderColor: 'borderStrong', color: 'text' } },
+    { variant: 'soft', color: 'neutral', css: { bg: 'surfaceSunken', color: 'text' } },
+    // success
+    { variant: 'solid', color: 'success', css: { bg: 'success', borderColor: 'success', color: 'fg.onSuccess' } },
+    { variant: 'soft', color: 'success', css: { bg: 'successSubtle', color: 'success' } },
+    // warning
+    { variant: 'solid', color: 'warning', css: { bg: 'warning', borderColor: 'warning', color: 'fg.onAccent' } },
+    { variant: 'soft', color: 'warning', css: { bg: 'warningSubtle', color: 'warning' } },
+    // danger (color)
+    { variant: 'solid', color: 'danger', css: { bg: 'danger', borderColor: 'danger', color: 'fg.onDanger' } },
+    { variant: 'soft', color: 'danger', css: { bg: 'dangerSubtle', color: 'danger' } },
+  ],
   defaultVariants: {
     variant: 'solid',
     size: 'md',
