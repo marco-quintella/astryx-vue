@@ -1,0 +1,13 @@
+{
+  "name": "@astryxdesign/vue-tokens",
+  "version": "0.0.1",
+  "description": "Design tokens shared across @astryxdesign/vue packages (placeholder).",
+  "license": "MIT",
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "files": ["src", "dist"],
+  "private": true
+}

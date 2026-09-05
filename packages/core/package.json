@@ -1,0 +1,57 @@
+{
+  "name": "@astryxdesign/vue-core",
+  "version": "0.1.0",
+  "description": "Vue 3 port of Astryx design system — components, composables, theme tokens.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./styles.css": "./dist/styles.css",
+    "./Button": {
+      "types": "./dist/Button/index.d.ts",
+      "import": "./dist/Button/index.js"
+    },
+    "./styled-system": "./styled-system/index.js"
+  },
+  "files": [
+    "dist",
+    "styled-system",
+    "README.md"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "scripts": {
+    "build": "vite build && vue-tsc --declaration --emitDeclarationOnly --outDir dist",
+    "dev": "vite build --watch",
+    "test": "vitest run",
+    "test:unit": "vitest run",
+    "test:unit:watch": "vitest",
+    "typecheck": "vue-tsc --noEmit",
+    "lint": "eslint src --ext .ts,.vue"
+  },
+  "peerDependencies": {
+    "vue": "^3.4.0"
+  },
+  "dependencies": {
+    "@astryxdesign/vue-tokens": "workspace:*",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@pandacss/dev": "^0.51.0",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/test-utils": "^2.4.6",
+    "happy-dom": "^15.11.7",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11",
+    "vitest": "^2.1.6",
+    "vue-tsc": "^2.1.10"
+  }
+}

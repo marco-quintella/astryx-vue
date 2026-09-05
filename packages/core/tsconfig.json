@@ -1,0 +1,15 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "src",
+    "baseUrl": ".",
+    "paths": {
+      "styled-system/*": ["styled-system/*"],
+      "@/*": ["src/*"]
+    },
+    "types": ["vue", "vitest/globals"]
+  },
+  "include": ["src/**/*.ts", "src/**/*.vue", "styled-system/**/*.ts"],
+  "exclude": ["dist", "node_modules", "**/*.test.ts"]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "astryx-vue",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Port of Astryx design system to Vue 3 — MIT",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "packageManager": "pnpm@10.33.2",
+  "scripts": {
+    "build": "pnpm -r build",
+    "dev": "pnpm --filter @astryxdesign/playground dev",
+    "test": "pnpm -r test",
+    "test:unit": "pnpm --filter @astryxdesign/vue-core test:unit",
+    "test:e2e": "pnpm --filter @astryxdesign/playground test:e2e",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck",
+    "prepare": "panda codegen --silent"
+  },
+  "devDependencies": {
+    "@pandacss/dev": "^0.51.0",
+    "typescript": "^5.6.3"
+  }
+}
