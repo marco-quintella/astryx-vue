@@ -43,12 +43,12 @@ astryx-vue/
 
 ## Roadmap por fases
 
-### Fase 0 — Setup (v0.0.1) **[EM ANDAMENTO]**
+### Fase 0 — Setup (v0.0.1) **[COMPLETA]**
 - [x] Repo local + roadmap
-- [ ] pnpm workspaces + tsconfig base
-- [ ] Panda CSS preset + tokens (palette, spacing, radius, typography)
-- [ ] Vite build (lib mode) para `@astryxdesign/vue-core`
-- [ ] CI smoke: `pnpm build` + `pnpm test` passam
+- [x] pnpm workspaces + tsconfig base
+- [x] Panda CSS preset + tokens (palette, spacing, radius, typography)
+- [x] Vite build (lib mode) para `@astryxdesign/vue-core`
+- [x] CI smoke: `pnpm build` + `pnpm test` passam
 
 ### Fase 1 — Piloto Button (v0.1.0) **[EM ANDAMENTO]**
 - [ ] Button com API equivalente ao Astryx:
